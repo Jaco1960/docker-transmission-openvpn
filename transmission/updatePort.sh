@@ -1,7 +1,7 @@
 #! /bin/sh
 
 # Source our persisted env variables from container startup
-. /etc/transmission/environment-variables.sh
+## DISABLE: Already sourced in Start.sh ##. /etc/transmission/environment-variables.sh
 
 # Settings
 TRANSMISSION_PASSWD_FILE=/config/transmission-credentials.txt
