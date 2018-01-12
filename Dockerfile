@@ -25,6 +25,7 @@ RUN apt-get update \
     && groupmod -g 1000 users \
     && useradd -u 911 -U -d /config -s /bin/false abc \
     && usermod -G users abc
+    && ln -s /downloads /data
 
 ADD openvpn/ /etc/openvpn/
 ADD transmission/ /etc/transmission/
