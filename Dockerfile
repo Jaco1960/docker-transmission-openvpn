@@ -26,6 +26,7 @@ RUN apt-get update \
     && useradd -u 911 -U -d /config -s /bin/false abc \
     && usermod -G users abc
     && ln -s /downloads /data
+    && ln -s /download /data
 
 ADD openvpn/ /etc/openvpn/
 ADD transmission/ /etc/transmission/
