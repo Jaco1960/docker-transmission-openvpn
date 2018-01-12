@@ -24,8 +24,8 @@ RUN apt-get update \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && groupmod -g 1000 users \
     && useradd -u 911 -U -d /config -s /bin/false abc \
-    && usermod -G users abc
-    && ln -s /downloads /data
+    && usermod -G users abc \
+    && ln -s /downloads /data \
     && ln -s /download /data
 
 ADD openvpn/ /etc/openvpn/
